@@ -1,10 +1,10 @@
 <%= turbo_frame_tag(dom_id(concert)) do %>
 <article class="my-4">
-  <div class="grid gap-4 grid-cols-5">
-    <div class="col-span-1 text-xl">
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-6 text-center md:text-left">
+    <div class="md:col-span-1 text-xl">
       <%= concert.start_time.by_example("3:04 PM") %>
     </div>
-    <div class="col-span-3">
+    <div class="col-span-1 md:col-span-3">
       <div class="name">
         <div class="text-lg font-bold">
           <%#= link_to(concert.name, concert) %>
@@ -23,7 +23,7 @@
         <%= concert.venue.name %>
       </div>
     </div>
-    <div class="col-span-1 text-xl">
+    <div class="col-span-1 md:col-span-2 text-xl">
       <% if concert.sold_out? %>
         Sold out
       <% else %>
@@ -32,7 +32,7 @@
       <% end %>
       <br>
       <br>
-      <div class="flex">
+      <div class="flex text-center md:text-left justify-center md:justify-start">
         <% if current_user %>
           <% if current_user %>
             <%= link_to(

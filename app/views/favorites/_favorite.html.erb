@@ -1,10 +1,10 @@
 <%- concert = favorite.concert %>
 <article class="my-6" id="<%= dom_id(favorite) %>">
-  <div class="grid gap-4 grid-cols-5">
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-6 text-center md:text-left">
     <div class="col-span-1 text-xl">
       <%= concert.start_time.by_example("Jan 02 @ 3:04 PM") %>
     </div>
-    <div class="col-span-3">
+    <div class="col-span-1 md:col-span-3">
       <div class="name">
         <div class="text-lg font-bold">
           <%= link_to( concert.name,
@@ -22,11 +22,10 @@
         <%= concert.venue.name %>
       </div>
     </div>
-    <div class="col-span-1 text-xl">
+    <div class="col-span-1 md:col-span-2 text-xl">
       <span></span>
       <br>
-      <br>
-      <div class="flex">
+      <div class="flex justify-center">
         <%= button_to(
               "Remove Favorite",
               favorite_path(id: favorite.id),

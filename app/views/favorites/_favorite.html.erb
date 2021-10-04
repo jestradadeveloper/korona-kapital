@@ -1,5 +1,5 @@
 <%- concert = favorite.concert %>
-<article class="my-6" id="<%= dom_id(favorite) %>">
+<article class="my-2 bg-gray-200 p-3 rounded-lg" id="<%= dom_id(favorite) %>">
   <div class="grid gap-4 grid-cols-1 md:grid-cols-6 text-center md:text-left">
     <div class="col-span-1 text-xl">
       <%= concert.start_time.by_example("Jan 02 @ 3:04 PM") %>

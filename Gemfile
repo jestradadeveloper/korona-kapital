@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
-
+gem 'dotenv-rails', groups: [:development, :test]
 # Reduces boot times through caching; required in config/boot.rb
 gem "activerecord-postgres_enum"
 gem "amazing_print"
@@ -22,12 +22,14 @@ gem "table_print"
 gem "hotwire-rails"
 gem "webpacker", "6.0.0.beta.6"
 
+
 group :development, :test do
   gem "cypress-rails"
   gem "dotenv-rails"
   gem "faker"
   gem "pry-rails"
   gem "pry-rescue"
+
   gem "rspec-rails"
   gem "standard"
   gem "test-prof"

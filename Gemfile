@@ -37,6 +37,10 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.5', require: false
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-db-tasks', require: false
   gem "annotate"
   gem "erb_lint", require: false
   gem "htmlbeautifier"
@@ -46,6 +50,7 @@ group :development do
   gem "spring-commands-rspec"
   gem "spring-watcher-listen"
   gem "web-console", ">= 4.1.0"
+  
 end
 
 group :test do

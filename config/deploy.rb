@@ -10,7 +10,8 @@ set :repo_url, "git@github.com:jestradadeveloper/korona-kapital.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deploy/korona-kapital"
-set :branch, ENV['BRANCH'] if ENV['BRANCH']
+#set :branch, ENV['BRANCH'] if ENV['BRANCH']
+set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :linked_files, %w{config/database.yml config/master.key}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 set :keep_releases, 3

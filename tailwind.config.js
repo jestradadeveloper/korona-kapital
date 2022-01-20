@@ -7,8 +7,13 @@
  * Visit http://www.pragmaticprogrammer.com/titles/nrclient for more book information.
 ***/
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: [
+    "./app/**/*.html.erb",
+    "./app/helpers/**/*.rb",
+    "./app/javascript/**/*.js",
+    "./app/javascript/**/*.vue",
+  ],
+  darkMode:'media', // or 'media' or 'class'
   theme: {
     extend: {},
     container: {

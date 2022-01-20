@@ -7,24 +7,10 @@
  * Visit http://www.pragmaticprogrammer.com/titles/nrclient for more book information.
 ***/
 module.exports = {
-  purge: [
-    "./app/**/*.html.erb",
-    "./app/helpers/**/*.rb",
-    "./app/javascript/**/*.js",
-    "./app/javascript/**/*.vue",
-  ],
-  darkMode:'media', // or 'media' or 'class'
+  purge: [],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {},
-    container: {
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      }
-    }
   },
   variants: {
     extend: {},

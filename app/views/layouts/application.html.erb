@@ -10,9 +10,8 @@
           media: "all",
           "data-turbolinks-track": "reload"
         ) %>
-
-    <%= javascript_pack_tag( "application",
-        "venue_display",
+    <%= javascript_pack_tag( "application","data-turbo-track": "reload" ) %>
+    <%= javascript_pack_tag( "venue_display",
         "data-turbo-track": "reload" ) %>
   </head>
   <body>
@@ -22,7 +21,9 @@
         <div class="mt-6">
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
-          <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex">
+            <%= yield %>
+    </main>
         </div>
       </div>
     </section>

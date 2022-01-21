@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
-require 'capistrano-db-tasks'
+
 set :application, "korona-kapital"
 set :repo_url, "git@github.com:jestradadeveloper/korona-kapital.git"
 
@@ -18,7 +18,7 @@ set :keep_releases, 3
 set :keep_assets, 3
 set :db_local_clean, true 
 set :db_remote_clean, true 
-
+set :passenger_restart_with_touch, false
 namespace :deploy do 
     desc 'Restart application'
     task :restart do 

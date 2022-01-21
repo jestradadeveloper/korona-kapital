@@ -60,5 +60,5 @@
 #     # password: "please use keys"
 #   }
 
-server '54.244.57.109', user: 'deploy', roles: %w{web app db}
+server '67.205.141.118', user: 'deploy', roles: %w{web app db}
 set :rails_env, 'production'

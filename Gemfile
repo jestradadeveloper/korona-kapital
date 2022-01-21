@@ -41,6 +41,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.5', require: false
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-db-tasks', require: false
+  gem 'capistrano-passenger', '>= 0.1.1'
   gem "annotate"
   gem "erb_lint", require: false
   gem "htmlbeautifier"

@@ -3,16 +3,16 @@
   data-css-css-class="hidden"
   data-css-status-value="false"
 >
-  <h2 class="text-3xl font-bold">
+  <h2 class="text-3xl font-bold text-blue-500">
     <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
-    <span class="<%= SimpleForm.button_class %> py-1 text-xl font-semibold cursor-pointer"
-        data-controller="text" 
-        data-text-target="elementWithText" 
-        data-text-status-value="false" 
-        data-text-off-value="Hide Day" 
-        data-text-on-value="Show Day" 
+    <span class="<%= SimpleForm.button_class %> py-1 text-xl font-semibold"
+        data-controller="text"
+        data-text-target="elementWithText"
+        data-text-status-value="false"
+        data-text-off-value="Hide Day"
+        data-text-on-value="Show Day"
         data-action="click->css#toggle click->text#toggle"
-    >
+      >
     </span>
   </h2>
   <% if show %>
@@ -22,6 +22,4 @@
       <% end %>
     </section>
   <% end %>
-
 </section>
-

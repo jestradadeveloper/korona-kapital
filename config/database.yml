@@ -5,15 +5,13 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['KORONA_DATABASE_NAME'] %>
+  database: korona_development
 
 test:
   <<: *default
-  database: <%= ENV['KORONA_DATABASE_NAME'] %>
+  database: korona_test
 
 production:
   <<: *default
-  database: korona_kapital_production
-  username: deploy
-  password: Rails.application.credentials.dig(:production, :db_password)
+  url: <%= ENV['DATABASE_URL'] %>
 

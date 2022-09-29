@@ -17,9 +17,8 @@ class CreateConcerts < ActiveRecord::Migration[6.1]
       t.datetime(:start_time)
       t.references(:venue, null: false, foreign_key: true)
       t.text(:genre_tags)
-      t.enum(:ilk, enum_name: :enum_ilk)
-      t.enum(:access, enum_name: :enum_access)
-
+      t.enum :ilk, enum_type: :enum_ilk
+      t.enum :access, enum_type: :enum_access
       t.timestamps
     end
   end

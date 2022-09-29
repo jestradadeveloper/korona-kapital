@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 2020_12_21_174447) do
     t.datetime "start_time"
     t.bigint "venue_id", null: false
     t.text "genre_tags"
-    t.enum "ilk", enum_name: "enum_ilk"
-    t.enum "access", enum_name: "enum_access"
+    t.enum "ilk", enum_type: "enum_ilk"
+    t.enum "access", enum_type: "enum_access"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["venue_id"], name: "index_concerts_on_venue_id"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 2020_12_21_174447) do
     t.integer "row"
     t.integer "number"
     t.bigint "user_id"
-    t.enum "status", enum_name: "enum_status"
+    t.enum "status", enum_type: "enum_status"
     t.bigint "ticket_order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

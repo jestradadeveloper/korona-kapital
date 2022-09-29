@@ -15,7 +15,7 @@ class CreateTickets < ActiveRecord::Migration[6.1]
       t.integer(:row)
       t.integer(:number)
       t.references(:user, null: true, foreign_key: true)
-      t.enum(:status, enum_name: :enum_status)
+      t.enum :status, enum_type: :enum_status
       t.references(:ticket_order)
       t.timestamps
     end

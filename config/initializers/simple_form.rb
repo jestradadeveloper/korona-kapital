@@ -92,7 +92,7 @@ SimpleForm.setup do |config|
   config.boolean_style = :nested
 
   # Default class for buttons
-  config.button_class = "h-10 px-5 py-1 m-2 text-white transition-colors duration-150 bg-gray-800 rounded-lg focus:shadow-outline  hover:bg-white hover:text-black border-black border"
+  config.button_class = "h-10 px-5 py-1 m-2 text-white transition-colors duration-150 bg-gray-800 rounded-lg focus:shadow-outline  hover:bg-white hover:text-black border-black border cursor-pointer"
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.

@@ -6,7 +6,7 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrclient for more book information.
 ***/
-import "@hotwired/turbo-rails" 
+import "@hotwired/turbo-rails"
 import "channels"
 import "controllers"
 
@@ -15,7 +15,7 @@ import "regenerator-runtime/runtime"
 import * as ActiveStorage from "@rails/activestorage"
 import Rails from "@rails/ujs"
 import  "../stylesheets/application";
-const images = require.context("../images", true) 
+const images = require.context("../images", true)
 const imagePath = (name) => images(name, true)
 
 

@@ -1,12 +1,7 @@
 import * as React from "react"
 import Row from "components/row"
 
-interface VenueProps {
-  rows: number
-  seatsPerRow: number
-}
-
-const Venue = (props: VenueProps): React.ReactElement => {
+const Venue = (props) => {
   const rowNumbers = Array.from(Array(props.seatsPerRow).keys())
   const rowItems = rowNumbers.map((rowNumber) => {
     return (

@@ -1,10 +1,7 @@
 import * as React from "react";
 
-interface SeatProps {
-    seatNumber: number
-}
 
-const Seat = (props: SeatProps): React.ReactElement => {
+const Seat = (props) => {
     return(
         <td>
             <span

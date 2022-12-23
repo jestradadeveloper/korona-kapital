@@ -15,6 +15,11 @@ ActiveRecord::Schema.define(version: 2020_12_21_174447) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # These are custom enum types that must be created before they can be used in the schema definition
+  create_enum "enum_access", ["general", "members", "vips"]
+  create_enum "enum_ilk", ["concert", "meet_n_greet", "battle"]
+  create_enum "enum_status", ["unsold", "held", "purchased", "refunded"]
+
   create_enum :enum_access, [
     "general",
     "members",
@@ -48,8 +53,8 @@ ActiveRecord::Schema.define(version: 2020_12_21_174447) do
     t.datetime "start_time"
     t.bigint "venue_id", null: false
     t.text "genre_tags"
-    t.enum "ilk", enum_type: "enum_ilk"
-    t.enum "access", enum_type: "enum_access"
+    t.enum "ilk", enum_type: "enum_ilk", as: "enum_ilk"
+    t.enum "access", enum_type: "enum_access", as: "enum_access"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["venue_id"], name: "index_concerts_on_venue_id"
@@ -97,7 +102,7 @@ ActiveRecord::Schema.define(version: 2020_12_21_174447) do
     t.integer "row"
     t.integer "number"
     t.bigint "user_id"
-    t.enum "status", enum_type: "enum_status"
+    t.enum "status", enum_type: "enum_status", as: "enum_status"
     t.bigint "ticket_order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

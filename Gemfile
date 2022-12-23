@@ -21,6 +21,8 @@ gem "simple_form-tailwind"
 gem "table_print"
 gem "hotwire-rails"
 gem "webpacker", "6.0.0.beta.6"
+gem 'activerecord-pg_enum'
+
 
 
 group :development, :test do
@@ -51,7 +53,7 @@ group :development do
   gem "spring-commands-rspec"
   gem "spring-watcher-listen"
   gem "web-console", ">= 4.1.0"
-  
+
 end
 
 group :test do
